@@ -106,3 +106,26 @@ void traverse() {
 	}
 }
 
+void searcdata() {
+	if (listempty()) {
+		cout << "list kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		int nim;
+		cout << "masukkan nim: ";
+		cin >> nim;
+		node* currentnode = start;
+		while (currentnode != NULL) {
+			if (currentnode->noMhs == nim) {
+				cout << "nim: " << currentnode -> noMhs << ", nama: << currentnode -> name << endl;";
+				return;
+			}
+			currentnode = currentnode->next;
+		}
+		cout << "data tidak ditemukan" << endl;
+	}
+}
+
