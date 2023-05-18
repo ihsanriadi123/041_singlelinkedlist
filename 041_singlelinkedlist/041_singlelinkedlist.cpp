@@ -160,3 +160,35 @@ int main() {
 					break;
 				}
 
+				int nim;
+				cout << "masukkan nim: ";
+				cin >> nim;
+				if (deletenode(nim)) {
+					cout << "nim: " << nim << "berhasil dihapus" << endl;
+					system("pause");
+					system("cls");
+				}
+				else
+					cout << "data tidak ditemukan" << endl;
+				break;
+			case 3:
+				traverse();
+				break;
+			case 4:
+				Searchdata();
+				break;
+			case 5:
+				break;
+			default:
+				cout << "pilihan tidak ada" << endl;
+				break;
+			}
+		}
+		catch (exception e)
+		{
+			cout << "terjadi kesalahan" << endl;
+		}
+
+	} while (pilihan !-= 5);
+	
+}
