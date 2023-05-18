@@ -17,7 +17,7 @@ void addnode() {
 	cin >> nim;
 	cout << "masukkan nama: ";
 	cin >> nama;
-	nodebaru -> noMhs = nim;
+	nodebaru->noMhs = nim;
 	nodebaru->name = nama;
 
 	if (start == NULL || nim <= start->noMhs) {
@@ -45,4 +45,8 @@ void addnode() {
 		previous = current;
 		current = current->next;
 	}
+
+	nodebaru->next = current;
+	previous->next = nodebaru;
+}
 
