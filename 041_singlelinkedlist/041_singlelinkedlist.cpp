@@ -129,3 +129,34 @@ void searcdata() {
 	}
 }
 
+int main() {
+	int pilihan;
+	do
+	{
+		try
+		{
+
+			cout << "1. tambah data" << endl;
+			cout << "2. hapus data" << endl;
+			cout << "3. tampilkan data" << endl;
+			cout << "4. cari data" << endl;
+			cout << "5. keluar" << endl;
+			cout << "pilihan: ";
+			cin >> pilihan;
+			switch (pilihan)
+			{
+			case 1:
+				addnode();
+				cout << "data berhasil ditambahkan" << endl;
+				system("pause");
+				system("cls");
+				break;
+			case 2:
+				if (listempty())
+				{
+					cout << "list kosong" << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
