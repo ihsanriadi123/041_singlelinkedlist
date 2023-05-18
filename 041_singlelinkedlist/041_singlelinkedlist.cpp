@@ -83,10 +83,26 @@ bool deletenode(int nim) {
 	return true;
 }
 bool listempty() {
-	if (start = NULL)
+	if (start == NULL)
 		return true;
 	else
 		return false;
 
+}
+
+void traverse() {
+	if (listempty()) {
+		cout << "list kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		node* currentnode = start;
+		while (currentnode != NULL) {
+			cout << "nim: " << currentnode->noMhs << ", nama: " << currentnode->name << endl;
+			currentnode = currentnode->next;
+		}
+	}
 }
 
