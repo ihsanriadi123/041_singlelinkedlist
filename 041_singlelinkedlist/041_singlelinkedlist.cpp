@@ -24,8 +24,11 @@ void addnode() {
 		if (start != NULL && nim == start->noMhs)
 		{
 			cout << "nim sudah ada" << endl;
-			return 0;
+			return;
 		}
 
-
+		nodebaru->next = start;
+		start = nodebaru;
+		return;
 	}
+
