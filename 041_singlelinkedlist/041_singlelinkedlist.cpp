@@ -50,3 +50,43 @@ void addnode() {
 	previous->next = nodebaru;
 }
 
+bool serachnode(int nim, node* current, node* previous) {
+	previous = start;
+	current = start;
+	while (current != NULL && nim > current->noMhs)
+	{
+		previous = current;
+		current = current->next;
+	}
+
+	if (current == NULL)
+	{
+		return false;
+	}
+	else if (current->noMhs == nim)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+bool deletenode(int nim) {
+	node* current = start;
+	node* previous = start;
+	if (serachnode(nim, previous, current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == start)
+		start = current->next;
+	return true;
+}
+bool listempty() {
+	if (start = NULL)
+		return true;
+	else
+		return false;
+
+}
+
